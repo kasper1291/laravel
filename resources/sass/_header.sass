@@ -1,0 +1,249 @@
+@import vars
+
+.hamburger
+  z-index: 1000
+  width: 30px
+  height: 30px
+  border: 3px solid transparent
+  border-radius: 50%
+  transition: all 0.3s ease-in-out
+  .line
+    width: 18px
+    height: 3px
+    background-color: #000
+    display: block
+    margin: 4px auto
+    transition: all 0.3s ease-in-out
+
+#hamburger-6.is-active
+  transition: all 0.3s ease-in-out
+  transition-delay: 0.6s
+  transform: rotate(45deg)
+  border-color: #fff
+#hamburger-6.is-active .line:nth-child(2)
+  width: 0
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3)
+  transition-delay: 0.3s
+  background-color: #fff
+#hamburger-6.is-active .line:nth-child(1)
+  transform: translateY(7px)
+#hamburger-6.is-active .line:nth-child(3)
+  transform: translateY(-7px) rotate(90deg)
+
+
+.mobile-header-menu
+  position: fixed
+  background-color: $accent
+  width: 100%
+  height: calc(100vh - 60px)
+  padding: 0 15px 15px
+  top: 60px
+  left: 0
+  z-index: 100
+  visibility: hidden
+  opacity: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  transition: all .25s ease-in-out
+  ul
+    flex: 1 0 100%
+    margin: 15px 15px 30px
+    padding: 0
+    align-self: flex-end
+    li
+      display: block
+      text-align: center
+      & + li
+        margin-top: 10px
+      a
+        color: #000
+        font-size: 24px
+        text-transform: uppercase
+  .header__nav_logo_mobile
+    width: 66px
+    img
+      display: block
+      width: 100%
+      height: auto
+  &.open
+    visibility: visible
+    opacity: 1
+    overflow: auto
+
+.header
+  display: flex
+  justify-content: flex-start
+  padding-bottom: 48px
+  position: relative
+  &::after
+    content: ''
+    display: block
+    width: 91%
+    height: 1px
+    background-color: $accent
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+  .header__nav_menu_mobile
+    display: none
+    position: relative
+    >a
+      font-size: 18px
+      font-family: $bold-font
+      margin-right: 30px
+      transition: all .25s ease-in-out
+      span
+        font-family: $main-font
+        font-weight: normal
+        font-size: 12px
+  .header__nav
+    flex: 0 0 270px
+    padding: 78px 33px 33px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    .header__nav_logo
+      width: 77px
+      img
+        width: 100%
+        height: auto
+    .header__nav_menu
+      width: 77px
+      flex-grow: 1
+      position: relative
+      margin-top: 140px
+      ul
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: flex-end
+        transform: rotate(-90deg) translate(-100%, 20px)
+        position: absolute
+        transform-origin: left top
+        top: 0
+        left: 0
+        li
+          display: block
+          &+li
+            margin-left: 30px
+          a
+            font-size: 20px
+            text-decoration: none
+            text-transform: uppercase
+            white-space: nowrap
+            -webkit-text-stroke-width: 1px
+            -webkit-text-stroke-color: transparent
+            &:hover
+              -webkit-text-stroke-color: $accent
+  .header__content
+    background-position: center
+    background-size: cover
+    flex-grow: 1
+    position: relative
+    overflow: hidden
+    padding: 78px 60px
+    z-index: 1
+    min-height: 820px
+    &::before
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      background-color: #000
+      position: absolute
+      left: 0
+      top: 0
+      opacity: .5
+      z-index: -1
+    .header__content_top
+      text-align: right
+      margin-bottom: 80px
+      a
+        font-size: 36px
+        color: #fff
+        font-weight: bold
+        font-family: $bold-font
+        span
+          font-family: $main-font
+          font-weight: normal
+          font-size: 21px
+    .header__content_middle
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .header__content_middle_left
+        flex: 1 0 290px
+        max-width: 364px
+        margin: 40px 20px 0
+        p
+          font-size: 28px
+          color: #fff
+          margin: 0
+          &.green
+            color: $accent
+            font-family: $bold-font
+        form
+          margin-top: 50px
+          .form-content
+            label
+              display: block
+              width: 212px
+              input
+                display: block
+                width: 100%
+                height: 56px
+                line-height: 56px
+                color: #fff
+                font-size: 18px
+                text-indent: 20px
+                border: 1px solid #fff
+                background-color: transparent
+                &::placeholder
+                  color: #fff
+                  font-size: 18px
+            button
+              width: 212px
+              height: 56px
+              color: #fff
+              font-family: $bold-font
+              font-size: 18px
+              text-transform: uppercase
+              background-color: $accent
+              border: none
+              margin-top: 22px
+              transition: all ease .3s
+              &:hover
+                background-color: darken($accent, 10%)
+        .mobile-only
+          display: none
+      .header__content_middle_right
+        flex: 1 0 260px
+        max-width: 700px
+        h2
+          margin: 0
+          font-size: 6vw
+          font-family: $bold-font
+          text-transform: uppercase
+          color: transparent
+          -webkit-text-stroke-width: 2px
+          -webkit-text-stroke-color: $accent
+          text-align: right
+          line-height: 1
+    .header__content_bottom
+      margin-top: 80px
+      position: relative
+      h3
+        font-family: $bold-font
+        font-size: 34px
+        margin: 10px
+        color: #fff
+        text-transform: uppercase
+        span
+          color: $accent
+      .arrow, .tm
+        display: none

@@ -1,0 +1,133 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+    color: #000
+
+::selection
+    background-color: $accent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    font-size: 15px
+    min-width: 320px
+    position: relative
+    line-height: 1.3
+    font-family: $main-font
+    overflow-x: hidden
+    color: $text
+
+.container-1920
+    max-width: 1920px
+    padding: 0
+    margin: 0 auto
+
+.bold
+    font-family: $bold-font
+
+a
+    text-decoration: none
+    color: $text
+    transition: all ease .3s
+    &:hover
+        color: $accent
+
+button, a, input, button:active, button:focus, input:focus, a:visited
+    outline: none !important
+
+button
+    cursor: pointer
+
+.nowrap
+    white-space: nowrap
+
+*:focus
+    outline: none !important
+
+.mfp-bg
+    background: #828282
+    opacity: 1
+
+.white-popup
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    background: transparent
+    padding: 15px
+    width: 100%
+    max-width: 260px
+    p
+        font-size: 10px
+        color: #fff
+        text-align: center
+        margin: 0 auto 20px
+        max-width: 136px
+        text-transform: uppercase
+    form
+        .form-content
+            padding: 15px
+            background-color: $accent
+            label
+                display: block
+                width: 100%
+                &+label
+                    margin-top: 15px
+                input
+                    display: block
+                    width: 100%
+                    height: 32px
+                    line-height: 32px
+                    background-color: transparent
+                    color: #000
+                    text-indent: 15px
+                    border: 1px solid #000
+        button[type=submit]
+            display: block
+            margin: 20px auto 0
+            width: 106px
+            height: 32px
+            font-size: 12px
+            color: #000
+            background-color: #fff
+            text-transform: uppercase
+            border: none
+
+.mfp-close
+    width: 28px !important
+    height: 28px !important
+    line-height: 24px
+    border: 2px solid $accent !important
+    border-radius: 50%
+    color: $accent !important
+    text-align: center !important
+    padding: 0 !important
+
+
+
+
+
+@import "header"
+@import "works-slider"
+@import "how-we-works"
+@import "price"
+@import "team"
+@import "questions"
+@import "reviews"
+@import "footer"
+
+
+@import "media"

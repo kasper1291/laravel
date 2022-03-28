@@ -1,0 +1,94 @@
+@import vars
+
+.team
+  .team__content
+    padding: 70px 0
+    .team__content_title
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      flex-wrap: wrap
+      margin-bottom: 50px
+      padding: 0 15px
+      h2
+        flex: 1 0 260px
+        max-width: 970px
+        font-family: $bold-font
+        font-size: 190px
+        line-height: 1
+        text-transform: uppercase
+        text-align: right
+        color: transparent
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: #acba08
+        margin: 0 40px 20px
+      p
+        flex: 1 0 260px
+        max-width: 320px
+        font-size: 18px
+        margin: 0 0 40px
+        span
+          font-family: $bold-font
+    .team__content_main
+      width: 100%
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      padding-left: 70px
+      .team__content_main_left
+        flex: 1 0 290px
+        max-width: 330px
+        margin-right: 20px
+        p
+          font-size: 18px
+          margin: 0
+          &+p
+            margin-top: 20px
+        h4
+          margin-top: 120px
+          font-family: $main-font
+          text-transform: uppercase
+          font-size: 18px
+          line-height: 1.8
+          font-weight: normal
+        .mobile-only
+          display: none
+      .team__content_main_right
+        flex: 1 0 290px
+        img
+          display: block
+          width: 100%
+          height: auto
+        h3
+          margin: 40px 0 30px
+          font-family: $bold-font
+          text-transform: uppercase
+          font-size: 45px
+          color: $accent
+        .team__content_main_right_bottom
+          width: 100%
+          display: flex
+          justify-content: flex-start
+          flex-wrap: wrap
+          padding-right: 15px
+          .team__content_main_right_bottom_item
+            flex: 0 0 260px
+            margin: 0 30px 50px 0
+            p
+              position: relative
+              padding-left: 34px
+              line-height: 1.6
+              margin: 0
+              min-height: 74px
+              &::before
+                content: ''
+                display: block
+                width: 16px
+                height: 4px
+                background: url(../img/_src/line.svg) center no-repeat
+                position: absolute
+                left: 0
+                top: 10px
+              &+p
+                margin-top: 20px

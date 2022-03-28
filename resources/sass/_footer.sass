@@ -1,0 +1,63 @@
+@import vars
+
+.footer__content
+  background-color: $accent
+  padding: 35px 70px 70px
+  h2
+    font-family: $bold-font
+    font-size: 190px
+    line-height: 1
+    text-transform: uppercase
+    color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #fff
+    margin: 0 0 60px
+    max-width: 1210px
+  .footer__content_contacts
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    .phone
+      margin: 20px 5px
+      font-size: 34px
+      color: #000
+      font-family: $bold-font
+      span
+        font-family: $main-font
+        font-weight: normal
+        color: #fff
+    .mail
+      font-size: 24px
+      color: #fff
+      text-decoration: underline
+      margin: 20px 5px
+    ul
+      margin: 0
+      padding: 0
+      width: 100%
+      max-width: 340px
+      display: flex
+      justify-content: space-evenly
+      li
+        display: block
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 82px
+          height: 82px
+          border-radius: 50%
+          border: 2px solid #fff
+          font-size: 38px
+          color: #fff
+          position: relative
+          img
+            display: block
+            width: 40px
+            height: auto
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 15px

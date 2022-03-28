@@ -1,0 +1,84 @@
+@import vars
+
+.questions
+  .questions__content
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    position: relative
+    padding-bottom: 48px
+    &::after
+      content: ''
+      display: block
+      width: 91%
+      height: 1px
+      background-color: $accent
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+    .questions__content_image
+      flex: 1 0 290px
+      img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .questions__content_form-block
+      flex: 1 0 290px
+      padding: 60px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      background-color: $accent
+      .questions__content_form-block_wrapper
+        flex: 1 0 260px
+        max-width: 690px
+        h3
+          font-family: $main-font
+          margin: 0
+          font-size: 55px
+          color: #fff
+          font-weight: normal
+        h2
+          font-family: $bold-font
+          font-size: 55px
+          color: #fff
+          margin: 10px 0 50px
+          line-height: 1.4
+        form
+          .form-content
+            width: 100%
+            max-width: 600px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            label
+              display: block
+              flex: 1 0 100px
+              max-width: 262px
+              input
+                display: block
+                background-color: $accent
+                width: 100%
+                height: 76px
+                line-height: 76px
+                color: $text
+                font-size: 24px
+                text-indent: 20px
+                border: 1px solid #fff
+            button
+              flex: 1 0 100px
+              max-width: 274px
+              height: 76px
+              color: #000
+              font-family: $bold-font
+              font-size: 24px
+              text-transform: uppercase
+              background-color: #fff
+              border: 1px solid transparent
+              transition: all ease .3s
+              &:hover
+                border-color: #000
+

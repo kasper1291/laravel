@@ -1,0 +1,32 @@
+@import vars
+
+.works-slider
+  margin-top: 48px
+  .works-slider__content
+    >h2
+      display: none
+    .item
+      height: 917px
+      a
+        display: block
+        img
+          display: block
+          max-height: 100%
+          object-fit: cover
+        &+a
+          margin-top: 24px
+
+
+.works-slider
+  .owl-nav
+    display: block !important
+    button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      .mob
+        display: none
+      &.owl-prev
+        left: 5%
+      &.owl-next
+        right: 5%

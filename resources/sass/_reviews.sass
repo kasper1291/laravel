@@ -1,0 +1,59 @@
+@import vars
+
+.reviews
+  .reviews__content
+    padding: 40px 0 60px
+    max-width: 1400px
+    margin: 0 auto
+    h2
+      font-family: $bold-font
+      font-size: 50px
+      color: $accent
+      text-align: center
+      text-transform: uppercase
+      margin: 0 0 50px
+    .swiper-container
+      width: 100%
+      height: 340px
+      .reviews__content_carousel_item
+        .top
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-bottom: 25px
+          .photo
+            flex: 0 0 130px
+            height: 130px
+            border-radius: 50%
+            overflow: hidden
+            margin-right: 17px
+            img
+              display: block
+              width: 100%
+              height: 100%
+              object-fit: cover
+          .name
+            flex: 1 0 20px
+            h3
+              font-family: $bold-font
+              font-size: 20px
+              margin: 0 0 10px
+            p
+              margin: 0
+        .bottom
+          p
+            line-height: 1.6
+            margin: 0
+
+.reviews .swiper-button-next:after, .reviews .swiper-button-prev:after
+  display: none
+
+.reviews .swiper-button-next, .reviews .swiper-button-prev
+  height: 70px
+  img
+    display: block
+    height: 100%
+    width: auto
+    &.mob
+      display: none
